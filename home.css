@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+/*Documentation*/
+/*https://css-tricks.com/snippets/css/clear-fix/*/
+.container::before {
+    content: '';
+    clear: both;
+}
+.container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+#top-nav {
+    background-color: #1c1c1c;
+    padding: 30px 0;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    width: 145px;
+}
+
+.main-nav {
+    float: right;
+    margin-top: 10px;
+}
+
+.main-nav ul li {
+    display: inline-block;
+}
+
+.main-nav ul li a{
+    text-transform: uppercase;
+    color: #c4c4c4;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.main-nav ul li a:hover {
+    color: #f74d4c;
+}
+
+.main-nav ul li.active a {
+    color: #f74d4c;
+}
