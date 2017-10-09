@@ -1,15 +1,23 @@
 * {
     margin: 0;
     padding: 0;
+
+    /*https://medium.com/@MateMarschalko/improving-font-rendering-with-css-3383fc358cbc*/
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-size: 14px;
+    font-weight: 300;
+    color: #616161;
+
+    text-rendering: optimizeLegibility;
 }
 
 .container {
-    width: 1140px;
+    max-width: 1140px;
     margin: auto;
 }
 
@@ -34,8 +42,7 @@ body {
     background-color: #1c1c1c;
     display: block;
     position: relative;
-
-    padding: 35px 0;
+    padding: 34px 0 30px;
 }
 
 .logo-brand {
@@ -43,12 +50,12 @@ body {
 }
 
 .logo-brand img {
-    width: 145px;
+    width: 143px;
 }
 
 .nav {
     float: right;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
 }
 
 .nav li {
@@ -60,18 +67,22 @@ body {
 }
 
 .nav li a {
-    padding: 5px 20px;
+    display: block;
+    padding: 10px 22px;
     color: #c4c4c4;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.5px;
     line-height: 1;
 }
 
+.nav li:last-child a{
+    padding-right: 15px;
+}
+
 .nav li a:hover {
-    padding: 5px 20px;
     color: #f74d4c;
 }
 
@@ -79,20 +90,24 @@ body {
 .header-content {
     color: #fff;
     text-align: center;
-    padding: 60px 0;
+    padding: 45px 0 60px;
 }
 
 h1.hero {
     font-size: 62px;
-    font-weight: 100;
-    color: #D9D9D9;
+    font-weight: 300;
+    color: #d0d0d0;
     padding-bottom: 20px;
+}
+
+h1.hero span{
+    font-weight: 900;
 }
 
 p.desc {
     font-size: 42px;
-    font-weight: 100;
-    color: #D9D9D9;
+    font-weight: 300;
+    color: #d0d0d0;
     margin-bottom: 50px;
 }
 
@@ -103,7 +118,172 @@ p.desc {
     border: none;
     font-size: 14px;
     font-weight: 700;
-    padding: 16px 35px;
+    padding: 16px 40px;
     border-radius: 5px;
+    /*letter-spacing: 0.2px;*/
+}
+
+/*Colom*/
+.colom-4 {
+    width: 25%;
+    float: left;
+}
+
+
+#services {
+    background-color: #f6f6f6;
+    padding: 100px 0;
+}
+
+.content-services {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.icon-feature {
+    height: 55px;
+    margin-bottom: 20px;
+}
+
+.content-services h3 {
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.content-services p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+#featured {
+    padding: 60px 0;
+}
+
+#featured header{
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.title-section {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+    /*color: #4e4e4e;*/
+    margin-bottom: 15px;
+}
+
+.desc-section {
+    font-size: 20px;
+    /*color: #595959;*/
+}
+
+.feature-nav {
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.feature-nav li {
+    display: inline-block;
+}
+
+.feature-nav li.active a {
+    background-color: #474747;
+}
+
+.feature-nav li a {
+    padding: 10px 22px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #f74d4c;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff8f8;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/*https://css-tricks.com/snippets/css/retina-display-media-query/*/
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .feature-nav li a {
+        font-weight: 900;
+    }
+}
+
+.feature-content {
+    padding-bottom: 10px;
+}
+
+.feature-content img {
+    /*width: 100%;*/
+}
+
+#footer {
+    background-color: #252525;
+    padding: 60px 0;
+}
+
+#footer .title-section{
     letter-spacing: 0.5px;
+    color: #E0E0E0;
+}
+
+.content-footer {
+    text-align: center;
+}
+
+.content-footer .desc-section {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #BEBEBE;
+}
+
+.content-footer header {
+    margin-bottom: 25px;
+}
+
+#footer .location {
+    padding-right: 30px;
+}
+
+.address {
+    color: #BEBEBE;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+}
+
+.address img,
+.address p{
+    display: inline;
+}
+
+.address img {
+    height: 12px;
+    padding-right: 4px;
+}
+
+.social-icon {
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+.social-icon li {
+    display: inline-block;
+    padding: 2px;
+}
+
+.social-icon li a img {
+    width: 32px;
+}
+
+.copyright {
+    background-color: #202020;
+    color: #BEBEBE;
+    text-align: center;
+    font-weight: 400;
+    padding: 30px 0;
 }
